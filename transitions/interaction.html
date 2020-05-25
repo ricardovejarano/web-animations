@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transitions</title>
+        <style>
+
+            body {
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+            }
+         .pelota{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            /* background-color: red; */
+            /* transition-property: width, height; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 1s;*/
+            /* transition-timing-function: ease; */
+            transition: 1s;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+         }
+
+         .pelota.a{
+            background-color: red;
+            left: 0;
+         }
+
+         .pelota.b{
+            background-color: blue;
+            right: 0;
+         }
+
+         .canasta{
+             position:relative;
+             height: 200px;
+             width: 100%;
+             /* border: 1px solid red; */
+         }
+
+         .canasta:hover .pelota.a {
+            left: calc(50% - 200px);
+         }
+
+         .canasta:hover .pelota {
+            right: calc(50% - 200px);
+         }
+    </style>
+    </head>
+    <body>
+        <div class="canasta">
+            <div class="pelota a">Braket</div>
+            <div class="pelota b">Trades</div>
+        </div>
+    </body>
+</html>
